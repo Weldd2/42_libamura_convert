@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   convert_atoi.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antoinemura <antoinemura@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 19:45:09 by marvin            #+#    #+#             */
-/*   Updated: 2024/12/17 02:59:41 by antoinemura      ###   ########.fr       */
+/*   Updated: 2024/12/17 17:35:30 by antoinemura      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "convert.h"
 
-int	ft_atoi(const char *nptr)
+int	convert_atoi(const char *nptr)
 {
 	int	signe;
 	int	total;

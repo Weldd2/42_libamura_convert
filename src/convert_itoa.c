@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   convert_itoa.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antoinemura <antoinemura@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 15:46:38 by amura             #+#    #+#             */
-/*   Updated: 2024/12/17 02:59:41 by antoinemura      ###   ########.fr       */
+/*   Updated: 2024/12/17 17:35:40 by antoinemura      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	count_digit(long n)
 	return (i + 1);
 }
 
-char	*ft_itoa(int n)
+char	*convert_itoa(int n)
 {
 	char	*r;
 	int		size;
