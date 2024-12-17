@@ -1,0 +1,10 @@
+{
+	"name": "convert",
+	"dependencies": [
+	  {
+		"name": "math",
+		"repo": "git@github.com:Weldd2/42_libamura_math.git"
+	  }
+	]
+  }
+  

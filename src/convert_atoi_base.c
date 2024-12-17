@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
+/*   convert_atoi_base.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antoinemura <antoinemura@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 11:34:14 by amura             #+#    #+#             */
-/*   Updated: 2024/12/17 02:59:41 by antoinemura      ###   ########.fr       */
+/*   Updated: 2024/12/17 12:23:05 by antoinemura      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ static int	is_valid(char *base, int *bl)
 	return (1);
 }
 
-int	ft_atoi_base(char *nbr, char *base)
+int	convert_atoi_base(char *nbr, char *base)
 {
 	long	r;
 	int		s;
