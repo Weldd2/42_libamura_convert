@@ -6,7 +6,7 @@ LIB_DIR = ..
 
 # Liste des dépendances (peut être vide, un ou plusieurs)
 DEPENDENCIES = math
-# URLs des dépendances
+# URLs des dépendances (à définir sous forme DEP_URL = <URL>)
 math_URL = https://github.com/Weldd2/42_libamura_math
 
 # Options de compilation avec les répertoires include des dépendances
@@ -31,7 +31,12 @@ SRCS = $(shell find $(SRC_DIR) -type f -name "*.c")
 OBJS = $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRCS))
 
 # Cible par défaut
-all: dependencies $(LIB)
+all: $(LIB)
+
+# Gestion conditionnelle des dépendances
+ifneq ($(strip $(DEPENDENCIES)),)
+all: dependencies
+endif
 
 # Règle pour gérer les dépendances
 dependencies:
@@ -50,8 +55,8 @@ dependencies:
 			exit 1; \
 		fi; \
 		if [ ! -f $(LIB_DIR)/$(dep)/$(dep).a ]; then \
-			echo "Erreur : $(dep).a non trouvé dans $(dep)"; \
-			exit 1; \
+			echo "Fichier $(dep).a non trouvé. Tentative de compilation..."; \
+			cd $(LIB_DIR)/$(dep) && make || { echo "Erreur : impossible de compiler $(dep)"; exit 1; }; \
 		fi; \
 	)
 	@echo "Toutes les dépendances sont satisfaites."
